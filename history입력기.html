@@ -47,10 +47,10 @@
 
 				if(tmp==res[i]['호실'].toString()){
 					// 테이블 채우기
-					drawItem(res[i]['연도'], res[i]['성명'], res[i]['내방을 빛낸 졸업생'], 50, 185, 156, 71.5, w, h);
+					drawItem(res[i]['연도'], res[i]['성명'], res[i]['내방을 빛낸 졸업생'], 45, 105, 130, 53, w, h);
 
 					h++;
-					if(h==12){
+					if(h==18){ // *18 세로 칸의 개수에 따라 조정 해줘야 한다.
 						w++;
 						h = 0;
 					}
@@ -78,7 +78,7 @@
 			pdf.addImage(imgData, 'JPEG', 0, 0);
 			document.getElementById('state').innerHTML = tmp+"호까지 완료";
 
-			pdf.save("download.pdf"); // 모든 결과는 pdf파일로 저장
+			pdf.save("룸히스토리.pdf"); // 모든 결과는 pdf파일로 저장
 		}, false);
 
 
@@ -92,6 +92,7 @@
 		// *********************************** 여기부터 함수선언 *********************************** 
 		function doExcute(){
 			var url = document.getElementById('excelPath').value;
+			// var url = 'room.xls';
 
 			/* set up async GET request */
 			var req = new XMLHttpRequest();
@@ -117,9 +118,11 @@
 			req.send();		
 		}
 
+
 		function drawHo(Hodata){
+			// 호실 그리기
 			context.font = "50px Arial";	            
-			context.fillText(Hodata+"호", 535, 90);
+			context.fillText(Hodata+"호", 520, 70);
 		}
 
 
@@ -129,18 +132,19 @@
 			// *wSpace : 가로 간격, *hSpace : 세로 간격, *wData : 가로, *hData : 세로
 
 			// 연도 채우기
-			context.font = "15px Arial";
+			context.font = "10px Arial";
 			context.fillText(year, wOffset + 12 + wSpace * wData, hOffset + hSpace * hData);		
 
 			// 이름 채우기
-			context.font = "20px Arial";
-			context.fillText(name, wOffset + wSpace * wData, hOffset + 20 + hSpace * hData);
+			context.font = "15px Arial";
+			context.fillText(name, wOffset + wSpace * wData, hOffset + 15 + hSpace * hData);
 
 			// 내방을 빛낸 졸업생 정보 채우기
 			if(moreInfo != null){
 				context.font = "10px Arial";
-				context.fillText(moreInfo, wOffset + wSpace * wData, hOffset + 35 + hSpace * hData);
+				context.fillText(moreInfo, wOffset - 10 + wSpace * wData, hOffset + 27 + hSpace * hData);
 			}
+			// 12 ,15, 10, 27 은 한칸에서 글자간의 간격을 조정하기 위함이다.
 		}
 		// ****************************************************************************************
 
