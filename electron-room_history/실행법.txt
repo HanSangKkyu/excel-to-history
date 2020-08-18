@@ -1,0 +1,8 @@
+[실행법]
+npm install
+npm start
+
+[exe 파일만들기]
+npm install electron-packager --save-dev
+npm install electron-packager -g
+electron-packager ./ room_history --platform=win32 --arch=x64
