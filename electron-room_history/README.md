@@ -5,7 +5,8 @@ electron을 이용해서 exe파일로 프로그램을 더욱 쉽게 사용할 �
 ## Visuals
 
 ## Installation
-```
+``` bash
 npm install
+npm start
 ```
 ## Usage
