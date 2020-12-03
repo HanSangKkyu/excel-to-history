@@ -4,11 +4,13 @@
 ## Description
 chrome, electron 버전이 존재합니다.  
 chrome 버전을 그대로 electron으로 감싸서 만들었기 때문에 기능상 차이는 없습니다.
-- [chrome 버전](https://github.com/HanSangKkyu/excel-to-history/tree/master/chrome-room_history)
+- ~~[chrome 버전](https://github.com/HanSangKkyu/excel-to-history/tree/master/chrome-room_history)~~
 - [electron 버전](https://github.com/HanSangKkyu/excel-to-history/tree/master/electron-room_history)
 
 ## Visuals
+![GIF](https://user-images.githubusercontent.com/31759313/100969255-2b12d680-3576-11eb-98da-fec4743c91e4.gif)
 
 ## Installation
-
+[electron 버전](https://github.com/HanSangKkyu/excel-to-history/tree/master/electron-room_history) 참고
 ## Usage
+[electron 버전](https://github.com/HanSangKkyu/excel-to-history/tree/master/electron-room_history) 참고
