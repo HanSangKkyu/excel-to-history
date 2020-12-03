@@ -17,5 +17,5 @@ npm install electron-packager -g
 electron-packager ./ room_history --platform=win32 --arch=x64
 ```
 ## Usage
-파일선택-다운로드-기다리기
+파일선택-다운로드-기다리기   
 ![GIF](https://user-images.githubusercontent.com/31759313/100969255-2b12d680-3576-11eb-98da-fec4743c91e4.gif)
